@@ -1,0 +1,42 @@
+num1=int(input("Enter Amount Needed : "))
+#input Amount Needed
+
+num2=float(input("Enter the percentage of Federal Withholdings: "))
+#input Federal % Withheld
+
+num3=float(input("Enter percentage of Stete Witholdings: "))
+#input State % Withheld
+
+mul4=int((num1*num2)+(num1*num3)+num1)
+#define total amount withdrawn
+#Taxes are (num1*num2)+(num1*num3)
+
+#changed int to round on then next line
+mul5=round(mul4*num2)
+#define mul5, Federal Tax to be withheld on total amount withdrawn
+
+mul6=round(mul4*num3)
+#define mul6, State Tax to be withheld on total amount withdrawn
+
+mul4=round(num1+mul5+mul6)
+#define mul4, Total Amount to be withheld to get the amount you want
+
+mul7=round(mul4*num2)
+#Total Federal tax withheld on full amount
+
+mul8=round(mul4*num3)
+#Totsl State tax withheld on full amount
+
+mul9=round(mul7+mul8+num1)
+#Total Amound Withdrawn
+
+mul10=round(mul9*num2)
+#define fed amount withheld
+a
+mul11=round(mul9*num3)
+#define state amount withheld
+
+print("Amount to be Withdrawn for Federal Taxes: ",mul7)
+print("Amount to be Withdrawn for State Taxes: ",mul8)
+print("Amount Withdrawn ",mul7+mul8+num1)
+#display the final answer
